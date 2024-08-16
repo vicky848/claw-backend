@@ -8,7 +8,9 @@ const db = require('./database'); // Ensure this file sets up the database conne
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:'https://claw-application.netlify.app'
+}));
 app.use(express.json()); // Use built-in express.json() instead of body-parser
 
 
